@@ -39,5 +39,17 @@ public class HTMLGenerator {
         return sb.toString();
     }
 
+    public static void main(String[] args) {
+        HTMLGenerator generator = new HTMLGenerator();
+        
+        StringBuilder html = new StringBuilder();
+        html.append(generator.createTitle("Mi Página Web"));
+        html.append(generator.createHeader("Bienvenidos a Mi Página", 1));
+        html.append(generator.createParagraph("Esta es una simple página web"));
+        html.append(generator.createLink("https://sfysh.com", "Haz clic aquí para visitar a Sfysh "));
+        html.append(generator.createList(List.of("Elemento 1", "Elemento 2", "Elemento 3"), true))
+        System.out.println(html.toString());
+    }
+
     
 }
